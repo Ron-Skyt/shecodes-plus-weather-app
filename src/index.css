@@ -1,0 +1,119 @@
+body {
+  background-color: #abd5c6;
+  margin-top: 20px;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+  background-color: #e3eef4;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 4px 6px 5px #1552634e;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.form-city-value {
+  background-color: white;
+  width: 65%;
+  box-shadow: 1px 1px 1px #1552634e;
+}
+
+.form-city-search {
+  background-color: #f0b917;
+  color: white;
+  width: 20%;
+  box-shadow: 1px 1px 1px #1552634e;
+}
+
+.current-weather-data {
+  background-color: #155263;
+  border-radius: 10px;
+  padding: 10px 0 10px 0;
+  margin: 20px;
+  color: white;
+}
+
+h1 {
+  margin: 10px 0 0 0;
+  color: white;
+  padding: 10px;
+}
+
+span {
+  padding: 0 20px;
+}
+
+p{
+    margin-top: 0;
+    font-size: 16px;
+}
+.current-temperature {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 120px 10px 120px;
+  color: black;
+  padding: 5px;
+}
+
+.current-degrees {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.degrees-symbol-celcius {
+  font-size: 40px;
+  font-weight: 400;
+  padding: 0 15px 0 5px;
+  position: relative;
+  top: 6px;
+}
+
+.current-weather-icon {
+  font-size: 45px;
+  position: relative;
+}
+
+.five-day-prognosis {
+  border-radius: 10px;
+  padding: 10px 0 10px 0;
+  margin: 20px;
+  color: black;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #155263;
+}
+
+.five-day-details {
+  display: flex;
+  justify-content: center;
+}
+
+.day {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 24px;
+  margin: 10px;
+  color: black;
+  box-shadow: 1px 1px 1px #1552634e;
+}
+
+footer {
+  color: black;
+  font-size: 12px;
+  margin-bottom: 10px;
+}

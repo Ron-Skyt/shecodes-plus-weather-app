@@ -3,64 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <header>
         <form>
-          <input type="text" placeholder="Enter city" />
-          <input type="submit" value="🔎 Search" />
+          <input
+            type="text"
+            placeholder="🔎 Enter city..."
+            class="form-city-value"
+          />
+          <input type="submit" value="Search" class="form-city-search" />
         </form>
       </header>
       <main>
-        <div class="current-weather">
-          <h1>City name</h1>
-          <div class="current-information">
-            <span class="current-day">Day</span>
-            <span class="current-date">Date</span>
-            <span class="current-time">Time</span>
-          </div>
+        <div class="current-weather-data">
+          <h1 class="weather-app-city">City name</h1>
+          <p>
+              <span class="current-date">June 11th </span>|
+            <span class="current-day">Monday</span> |
+            <span class="current-time">14:35</span>
+          </p>
           <div class="current-temperature">
-            <span class="current-degrees">27</span>
-            <span class="degrees-symbol-celcius">°C</span>
-            <span class="current-weather-icon">☀️</span>
-          </div>
-          <div class="current-weather-specifications">
-            <div class="wind">
-              Wind: <span class="wind-strength">5</span> m/s
-            </div>
-            <div class="humidity">
-              Humidity: <span class="humidity-percentage">70</span>%
-            </div>
+            <div class="current-degrees">27</div>
+            <div class="degrees-symbol-celcius">°C</div>
+            <div class="current-weather-icon">⛈️</div>
           </div>
         </div>
         <div class="five-day-prognosis">
-          <h3>Five day prognosis</h3>
-          <div class="first-day">
-            Tue
-            <div class="first-day-icon">☀️</div>
-            <div class="first-day-temp">25°C</div>
-          </div>
-          <div class="second-day">
-            Wed
-            <div class="second-day-icon">☀️</div>
-            <div class="second-day-temp">25°C</div>
-          </div>
-          <div class="third-day">
-            Thu
-            <div class="third-day-icon">☀️</div>
-            <div class="third-day-temp">25°C</div>
-          </div>
-          <div class="fourth-day">
-            Fri
-            <div class="fourth-day-icon">☀️</div>
-            <div class="fourth-day-temp">25°C</div>
-          </div>
-          <div class="fifth-day">
-            Sat
-            <div class="fifth-day-icon">☀️</div>
-            <div class="fifth-day-temp">25°C</div>
+          <h2>Five day prognosis</h2>
+          <div class="five-day-details">
+            <div class="day">
+              <div class="first-day"><strong>Tue</strong></div>
+              <div class="first-day-icon">⛈️</div>
+              <div class="first-day-temp">20°C</div>
+            </div>
+            <div class="day">
+              <div class="second-day"><strong>Wed</strong></div>
+              <div class="second-day-icon">☀️</div>
+              <div class="second-day-temp">25°C</div>
+            </div>
+            <div class="day">
+              <div class="third-day"><strong>Thu</strong></div>
+              <div class="third-day-icon">🌦️</div>
+              <div class="third-day-temp">19°C</div>
+            </div>
+            <div class="day">
+              <div class="fourth-day"><strong>Fri</strong></div>
+              <div class="fourth-day-icon">☀️</div>
+              <div class="fourth-day-temp">28°C</div>
+            </div>
+            <div class="day">
+              <div class="fifth-day"><strong>Sat</strong></div>
+              <div class="fifth-day-icon">🌧️</div>
+              <div class="fifth-day-temp">16°C</div>
+            </div>
           </div>
         </div>
       </main>
