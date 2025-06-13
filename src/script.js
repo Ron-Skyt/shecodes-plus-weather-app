@@ -4,12 +4,48 @@ function updateWeatherData(response) {
   let weatherInfo = document.querySelector("#current-weather-info");
   let wind = document.querySelector("#wind");
   let humidity = document.querySelector("#humidity");
+  let currentWeatherIcon = document.querySelector("#current-weather-icon");
+  currentWeatherIcon.innerHTML = `
+    <img
+      src="${response.data.daily[0].condition.icon_url}"
+      class="current-weather-icon"
+    />`;
 
   let firstDayTemp = document.querySelector("#first-day-temp");
+  let firstDayIcon = document.querySelector("#first-day-icon");
+  firstDayIcon.innerHTML = `
+    <img
+      src="${response.data.daily[1].condition.icon_url}"
+      class="current-weather-icon"
+    />`;
   let secondDayTemp = document.querySelector("#second-day-temp");
+  let secondDayIcon = document.querySelector("#second-day-icon");
+  secondDayIcon.innerHTML = `
+    <img
+      src="${response.data.daily[2].condition.icon_url}"
+      class="current-weather-icon"
+    />`;
   let thirdDayTemp = document.querySelector("#third-day-temp");
+  let thirdDayIcon = document.querySelector("#third-day-icon");
+  thirdDayIcon.innerHTML = `
+    <img
+      src="${response.data.daily[3].condition.icon_url}"
+      class="current-weather-icon"
+    />`;
   let fourthDayTemp = document.querySelector("#fourth-day-temp");
+  let fourthDayIcon = document.querySelector("#fourth-day-icon");
+  fourthDayIcon.innerHTML = `
+    <img
+      src="${response.data.daily[4].condition.icon_url}"
+      class="current-weather-icon"
+    />`;
   let fifthDayTemp = document.querySelector("#fifth-day-temp");
+  let fifthDayIcon = document.querySelector("#fifth-day-icon");
+  fifthDayIcon.innerHTML = `
+    <img
+      src="${response.data.daily[2].condition.icon_url}"
+      class="current-weather-icon"
+    />`;
 
   currentTemperature.innerHTML = Math.round(
     response.data.daily[0].temperature.day
@@ -86,7 +122,6 @@ function formatTimeAndDate() {
   fourthDay.innerHTML = `${days[day + 4]}`;
   fifthDay.innerHTML = `${days[day + 5]}`;
 
-  
   currentDateElement.innerHTML = `13 June`;
 }
 
