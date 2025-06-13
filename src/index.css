@@ -65,9 +65,9 @@ p {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  background-color: white;
+  border: 1px solid white;
   margin: 0 120px 10px 120px;
-  color: black;
+  color: white;
   padding: 5px;
 }
 
@@ -85,9 +85,11 @@ p {
   right: 5px;
 }
 
-.current-weather-icon {
-  font-size: 45px;
+#current-weather-icon {
   position: relative;
+  bottom: 15px;
+  height: 70px;
+  width: 70px;
 }
 
 .current-weather-info {
@@ -111,6 +113,7 @@ h2 {
 .five-day-data {
   display: flex;
   justify-content: center;
+  transform: scale(0.8);
 }
 
 .day {
@@ -120,6 +123,11 @@ h2 {
   margin: 10px;
   color: black;
   box-shadow: 1px 1px 1px #1552634e;
+}
+
+.five-day-data img {
+  width: 60px;
+  height: 60px;
 }
 
 footer {
