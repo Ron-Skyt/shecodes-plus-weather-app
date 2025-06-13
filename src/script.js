@@ -122,7 +122,24 @@ function formatTimeAndDate() {
   fourthDay.innerHTML = `${days[day + 4]}`;
   fifthDay.innerHTML = `${days[day + 5]}`;
 
-  currentDateElement.innerHTML = `13 June`;
+  let month = date.getMonth();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  let formattedMonth = months[month];
+  currentDateElement.innerHTML = `${date.getDate()} ${formattedMonth}`;
 }
 
 let searchFormElement = document.querySelector("#search-form");
