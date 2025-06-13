@@ -82,11 +82,17 @@ p {
   padding: 0 15px 0 5px;
   position: relative;
   top: 6px;
+  right: 5px;
 }
 
 .current-weather-icon {
   font-size: 45px;
   position: relative;
+}
+
+.current-weather-info {
+  font-size: 11px;
+  color: #f0b917;
 }
 
 .five-day-prognosis {

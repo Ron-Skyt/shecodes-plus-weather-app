@@ -5,6 +5,18 @@ function updateWeatherData(response) {
   cityElement.innerHTML = response.data.city;
   changeTemperature.innerHTML = currentTemperature;
 
+  let currentWeatherInfo = response.data.daily[0].condition.description;
+  let changeWeatherInfo = document.querySelector("#current-weather-info");
+  changeWeatherInfo.innerHTML = currentWeatherInfo;
+
+  let wind = Math.round(response.data.daily[0].wind.speed);
+  changeWind = document.querySelector("#wind");
+  changeWind.innerHTML = wind;
+
+  let humidity = Math.round(response.data.daily[0].temperature.humidity);
+  let changeHumidity = document.querySelector("#humidity");
+  changeHumidity.innerHTML = humidity;
+
   let tomorrowTemp = Math.round(response.data.daily[1].temperature.day);
   let changeTomorrowTemp = document.querySelector("#first-day-temp");
   changeTomorrowTemp.innerHTML = tomorrowTemp;
@@ -24,6 +36,8 @@ function updateWeatherData(response) {
   let fifthDayTemp = Math.round(response.data.daily[5].temperature.day);
   let changeFifthDayTemp = document.querySelector("#fifth-day-temp");
   changeFifthDayTemp.innerHTML = fifthDayTemp;
+
+  console.log(response.data);
 }
 
 function searchCity(city) {
