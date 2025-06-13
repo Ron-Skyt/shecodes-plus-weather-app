@@ -9,20 +9,21 @@
   <body>
     <div class="container">
       <header>
-        <form>
+        <form id="search-form">
           <input
             type="text"
             placeholder="🔎 Enter city..."
-            class="form-city-value"
+            class="search-form-city-input"
+            id="search-form-input"
           />
-          <input type="submit" value="Search" class="form-city-search" />
+          <input type="submit" value="Search" class="search-form-submit" />
         </form>
       </header>
       <main>
         <div class="current-weather-data">
-          <h1 class="weather-app-city">City name</h1>
+          <h1 class="weather-app-city" id="city">City name</h1>
           <p>
-              <span class="current-date">June 11th </span>|
+            <span class="current-date">June 11th </span>|
             <span class="current-day">Monday</span> |
             <span class="current-time">14:35</span>
           </p>
@@ -65,7 +66,7 @@
       </main>
       <footer>
         This project is coded by
-        <a href="http://github.com/Ron-Skyt" target="_blank">Ronja Skytte,</a>,
+        <a href="http://github.com/Ron-Skyt" target="_blank">Ronja Skytte</a>,
         is
         <a
           href="http://github.com/Ron-Skyt/shecodes-plus-weather-app"

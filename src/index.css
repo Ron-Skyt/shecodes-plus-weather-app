@@ -1,7 +1,8 @@
 body {
   background-color: #abd5c6;
   margin-top: 20px;
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .container {
@@ -22,13 +23,13 @@ input {
   margin: 0 5px;
 }
 
-.form-city-value {
+.search-form-city-input {
   background-color: white;
   width: 65%;
   box-shadow: 1px 1px 1px #1552634e;
 }
 
-.form-city-search {
+.search-form-submit {
   background-color: #f0b917;
   color: white;
   width: 20%;
@@ -54,9 +55,9 @@ span {
   padding: 0 20px;
 }
 
-p{
-    margin-top: 0;
-    font-size: 16px;
+p {
+  margin-top: 0;
+  font-size: 16px;
 }
 .current-temperature {
   display: flex;
