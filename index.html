@@ -22,45 +22,59 @@
       </header>
       <main>
         <div class="current-weather-data">
-          <h1 class="weather-app-city" id="city">City name</h1>
+          <h1 class="weather-app-city" id="city"></h1>
           <p>
-            <span class="current-date">June 11th </span>|
-            <span class="current-day">Monday</span> |
-            <span class="current-time">14:35</span>
+            <span class="current-date" id="date">June 11th</span>|
+            <span class="current-day" id="day">Monday</span> |
+            <span class="current-time" id="time">14:35</span>
           </p>
           <div class="current-temperature">
-            <div class="current-degrees">27</div>
+            <div class="current-degrees" id="current-temperature">27</div>
             <div class="degrees-symbol-celcius">°C</div>
-            <div class="current-weather-icon">☀️</div>
+            <div class="current-weather-icon" id="current-sky-icon">☀️</div>
           </div>
         </div>
         <div class="five-day-prognosis">
           <h2>Five day prognosis</h2>
           <div class="five-day-details">
             <div class="day">
-              <div class="first-day"><strong>Tue</strong></div>
-              <div class="first-day-icon">⛈️</div>
-              <div class="first-day-temp">20°C</div>
+              <div id="first-day"><strong>Tue</strong></div>
+              <div id="first-day-icon">⛈️</div>
+              <div class="first-day-temp">
+                <span id="first-day-temp">20</span>°C
+              </div>
             </div>
             <div class="day">
-              <div class="second-day"><strong>Wed</strong></div>
-              <div class="second-day-icon">☀️</div>
-              <div class="second-day-temp">25°C</div>
+              <div id="second-day">
+                <strong>Wed</strong>
+              </div>
+              <div id="second-day-icon">☀️</div>
+              <div class="second-day-temp">
+                <span id="second-day-temp">25</span>°C
+              </div>
             </div>
             <div class="day">
-              <div class="third-day"><strong>Thu</strong></div>
-              <div class="third-day-icon">🌦️</div>
-              <div class="third-day-temp">19°C</div>
+              <div id="third-day">
+                <strong>Thu</strong>
+              </div>
+              <div id="third-day-icon">🌦️</div>
+              <div class="third-day-temp">
+                <span id="third-day-temp">19</span>°C
+              </div>
             </div>
             <div class="day">
-              <div class="fourth-day"><strong>Fri</strong></div>
-              <div class="fourth-day-icon">☀️</div>
-              <div class="fourth-day-temp">28°C</div>
+              <div id="fourth-day"><strong>Fri</strong></div>
+              <div id="fourth-day-icon">☀️</div>
+              <div class="fourth-day-temp">
+                <span id="fourth-day-temp">28</span>°C
+              </div>
             </div>
             <div class="day">
-              <div class="fifth-day"><strong>Sat</strong></div>
-              <div class="fifth-day-icon">🌧️</div>
-              <div class="fifth-day-temp">16°C</div>
+              <div id="fifth-day"><strong>Sat</strong></div>
+              <div id="fifth-day-icon">🌧️</div>
+              <div class="fifth-day-temp">
+                <span id="fifth-day-temp">16</span>°C
+              </div>
             </div>
           </div>
         </div>

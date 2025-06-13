@@ -51,7 +51,9 @@ h1 {
   font-size: 50px;
 }
 
-span {
+#day,
+#date,
+#time {
   padding: 0 20px;
 }
 
