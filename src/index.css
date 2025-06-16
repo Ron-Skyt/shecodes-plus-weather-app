@@ -97,7 +97,7 @@ p {
   color: #f0b917;
 }
 
-.five-day-prognosis {
+.five-day-forecast {
   border-radius: 10px;
   padding: 10px 0 10px 0;
   margin: 20px;
@@ -123,6 +123,11 @@ h2 {
   margin: 10px;
   color: black;
   box-shadow: 1px 1px 1px #1552634e;
+  font-weight: bold;
+}
+
+.five-day-forecast .temp {
+  font-weight: 100;
 }
 
 .five-day-data img {
