@@ -6,10 +6,10 @@ function updateWeatherData(response) {
   let humidity = document.querySelector("#humidity");
   let currentWeatherIcon = document.querySelector("#current-weather-icon");
   currentWeatherIcon.innerHTML = `
-    <img
-      src="${response.data.daily[0].condition.icon_url}"
-      class="current-weather-icon"
-      />`;
+  <img
+  src="${response.data.daily[0].condition.icon_url}"
+  class="current-weather-icon"
+  />`;
 
   currentTemperature.innerHTML = Math.round(
     response.data.daily[0].temperature.day
@@ -18,6 +18,9 @@ function updateWeatherData(response) {
   weatherInfo.innerHTML = response.data.daily[0].condition.description;
   wind.innerHTML = Math.round(response.data.daily[0].wind.speed);
   humidity.innerHTML = Math.round(response.data.daily[0].temperature.humidity);
+
+  formatTimeAndDate(response);
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -32,7 +35,40 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function getForecast(city) {
+  let apiKey = "tfafb400af42538491bd1a6a3a041o83";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+    <div class="weather-forecast-date">${day}</div>
+    <div class="weather-forecast-icon"></div>
+    <div class="weather-forecast-temperatures">
+    <div class="weather-forecast-temp-high">
+    °C</div>
+    <div class="weather-forecast-temp-low">°C</div> 
+    </div>
+    </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 function formatTimeAndDate() {
+  let date = new Date();
+
   let timeElement = document.querySelector("#time");
   let currentDayElement = document.querySelector("#day");
   let currentDateElement = document.querySelector("#date");
@@ -49,7 +85,15 @@ function formatTimeAndDate() {
   timeElement.innerHTML = `${hours}:${minutes}`;
 
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   let formattedDay = days[day];
   currentDayElement.innerHTML = `${formattedDay}`;
@@ -72,29 +116,6 @@ function formatTimeAndDate() {
 
   let formattedMonth = months[month];
   currentDateElement.innerHTML = `${date.getDate()} ${formattedMonth}`;
-}
-
-function displayForecast() {
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
-  let forecastHtml = "";
-
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="weather-forecast-day">
-    <div class="weather-forecast-date">${day}</div>
-    <div class="weather-forecast-icon"></div>
-    <div class="weather-forecast-temperatures">
-      <div class="weather-forecast-temp-high">
-      °C</div>
-      <div class="weather-forecast-temp-low">°C</div> 
-      </div>
-    </div>
-    `;
-  });
-
-  let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = forecastHtml;
 }
 
 /*
@@ -144,12 +165,7 @@ fifthDayTemp.innerHTML = Math.round(response.data.daily[5].temperature.day);
 console.log(response.data);
 */
 
-let date = new Date();
-console.log(date);
-
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-formatTimeAndDate();
 searchCity("Solbjerg");
-displayForecast();
